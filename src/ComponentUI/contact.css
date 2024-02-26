@@ -1,0 +1,28 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 5vh 10% 5vh 10%;
+}
+.contact-img img {
+  width: 100%;
+  height: 80vh;
+}
+.contact-us {
+  display: flex;
+  flex-direction: column;
+}
+.contact-us h2 {
+  text-align: center;
+}
+.contact-us p {
+  padding: 2vh 0;
+  text-align: justify;
+}
+.contact-us-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 5vh;
+}

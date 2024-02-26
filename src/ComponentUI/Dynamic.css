@@ -1,0 +1,45 @@
+.dynamic_img img {
+  height: 80vh;
+  width: 100%;
+}
+.dynamic_main_container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 5vh 10%;
+}
+.dynamic_discription {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10vh;
+}
+.dynamic_discription * {
+  text-align: justify;
+}
+.place_txt,
+span {
+  color: red;
+}
+.dynamic_discription h1 {
+  text-align: center;
+}
+.dynamic_flex_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vh 5vw;
+  justify-content: flex-start;
+}
+.dynamic_items {
+  background-color: rgb(249, 244, 244);
+  padding: 0 0.5vw;
+  &:hover {
+    box-shadow: 10px 5px 5px 1px grey;
+  }
+}
+.dynamic_items img {
+  width: 20vw;
+  height: 30vh;
+}
+.dynamic_items p {
+  text-align: center;
+}
