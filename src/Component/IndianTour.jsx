@@ -42,7 +42,7 @@ function IndianTour() {
               return (
                 <>
                   <NavLink
-                    to={`${item.link}`}
+                    to={`${item.name}`}
                     className="IndianTour_items"
                     onClick={() => scrollToTop()}
                   >

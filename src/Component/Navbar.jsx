@@ -80,17 +80,32 @@ function Navbar() {
           <Route path="/familytour" element={<Family />} />
           <Route path="/summertour" element={<Sumer />} />
           <Route path="/adventure" element={<Adventure />} />
-          <Route path="india_tour/odisha" element={<Odisha />} />
-          <Route path="india_tour/goa_1" element={<GoaTour />} />
-          <Route path="india_tour/bihar" element={<Bihar />} />
-          <Route path="india_tour/asam" element={<Asam />} />
-          <Route path="india_tour/arunachal" element={<Arunachal />} />
-          <Route path="india_tour/andhra_pradesh" element={<AndraPradesh />} />
-          <Route path="tour_offer/honeymoon" element={<Honeymoon />} />
-          <Route path="tour_offer/beaches" element={<Beaches />} />
-          <Route path="tour_offer/hill_stations" element={<HillStation />} />
+          <Route path="India_tour/Odisha Tourism" element={<Odisha />} />
+          <Route path="India_tour/Goa Tourism" element={<GoaTour />} />
+          <Route path="India_tour/Bihar Tourism" element={<Bihar />} />
+          <Route path="India_tour/Asam Tourism" element={<Asam />} />
           <Route
-            path="tour_offer/golden_triangles"
+            path="India_tour/Arunachal Pradesh Tourism"
+            element={<Arunachal />}
+          />
+          <Route
+            path="India_tour/Andhra Pradesh Tourism"
+            element={<AndraPradesh />}
+          />
+          <Route
+            path="tour_offer/Honeymoon Packages India"
+            element={<Honeymoon />}
+          />
+          <Route
+            path="tour_offer/Beach Holiday in India"
+            element={<Beaches />}
+          />
+          <Route
+            path="tour_offer/Hill Station Holidays"
+            element={<HillStation />}
+          />
+          <Route
+            path="tour_offer/Golden Triangle India Tour"
             element={<GoldenTriangle />}
           />
         </Routes>

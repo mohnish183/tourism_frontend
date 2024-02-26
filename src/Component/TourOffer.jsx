@@ -81,7 +81,7 @@ function TourOffer() {
               return (
                 <>
                   <NavLink
-                    to={item.link}
+                    to={item.name}
                     className="touroffer_items"
                     onClick={() => scrollToTop()}
                   >
