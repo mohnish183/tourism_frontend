@@ -12,7 +12,7 @@ function Register() {
   const handleRegister = () => {
     try {
       const response = axios
-        .post("http://localhost:8000/pages/register", {
+        .post("https://tourism-17ui.onrender.com/pages/register", {
           email,
           password,
         })
