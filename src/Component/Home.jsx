@@ -108,7 +108,7 @@ function Home() {
 
             <h2 className="headingtext2">Find your Ideal Tour Packages</h2>
             <hr />
-            <p>
+            <p className="target_txt">
               Travel in India is like nothing you've ever experienced, from the
               magnificence Taj Mahal to the highlights of Kerala, Goa and India,
               this is a great trip for first-time visitors as it encompasses all

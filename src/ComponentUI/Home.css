@@ -47,6 +47,9 @@ hr {
   display: flex;
   justify-content: center;
   gap: 1vw;
+  margin-bottom: 10vh;
+}
+.target_txt {
   margin-bottom: 5vh;
 }
 .block {
@@ -60,7 +63,7 @@ hr {
 }
 .block img {
   height: 25vh;
-  width: auto;
+  width: 16vw;
 }
 .block h4 {
   text-align: center;
@@ -71,6 +74,10 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10vh;
+}
+.perfectHoliday-container p {
+  margin-bottom: 5vh;
 }
 .perfectHoliday-block {
   display: flex;
@@ -91,7 +98,7 @@ hr {
 }
 .perfect-item-block img {
   height: 40vh;
-  width: auto;
+  width: 20vw;
 }
 /* your style */
 .yourStyle-container {
