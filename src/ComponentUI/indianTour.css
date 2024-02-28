@@ -38,3 +38,28 @@
 .IndianTour_items p {
   text-align: center;
 }
+
+@media screen and (min-width: 600px) and (max-width: 820px) {
+  .IndiaTour_flex_container {
+    justify-content: center;
+  }
+  .IndianTour_items {
+    width: 45%;
+  }
+  .IndianTour_items img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .IndiaTour_flex_container {
+    justify-content: center;
+    flex-direction: column;
+  }
+  /* .IndianTour_items {
+    width: 45%;
+  } */
+  .IndianTour_items img {
+    width: 100%;
+  }
+}

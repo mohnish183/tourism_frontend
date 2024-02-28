@@ -26,3 +26,19 @@
   justify-content: space-between;
   padding: 5vh;
 }
+
+@media screen and (max-width: 767px) {
+  .contact-container {
+    width: 90%;
+    margin: 5vh 5% 5vh 5%;
+  }
+
+  .contact-img img {
+    height: 50vh;
+  }
+
+  .contact-us-block {
+    flex-direction: column;
+    padding: 2vh;
+  }
+}

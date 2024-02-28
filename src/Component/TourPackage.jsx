@@ -17,8 +17,9 @@ function TourPackage() {
     if (!token) {
       navigate("/login");
     } else {
+      // http://localhost:8000
       axios
-        .get("http://localhost:8000/pages/dashboard", {
+        .get("https://tourism-17ui.onrender.com/pages/dashboard", {
           headers: {
             authorization: `Bearer ${token}`,
           },

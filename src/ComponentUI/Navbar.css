@@ -5,8 +5,17 @@
 .logo_header {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 5vh;
+  padding-top: 1vh;
+}
+.second_header_part {
+  display: flex;
+  gap: 0 2vw;
+}
+.second_header_logo {
+  display: flex;
 }
 .contact-info {
   display: flex;
@@ -22,6 +31,10 @@
 }
 .contact_phone img {
   height: 4vh;
+}
+.register-part {
+  display: flex;
+  gap: 4vh;
 }
 /* ******* nav header */
 .navbar_link {
@@ -41,4 +54,131 @@
     background-color: white;
     color: brown;
   }
+  #display_register_none {
+    display: none;
+  }
+  #display_register_block {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 620px) {
+  .logo_header {
+    flex-direction: column;
+  }
+  .image_indian_tourism {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .second_header_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .second_header_part {
+    flex-direction: column;
+  }
+  .register-part {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0 20vh;
+  }
+  .hamburger_icon {
+    background-color: brown;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 5vh;
+  }
+  .hamburger_icon * {
+    height: 4vh;
+    color: white;
+    margin-right: 2vh;
+  }
+  .navbar_link * {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 620px) and (max-width: 820px) {
+  .logo_header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 5vh;
+  }
+  .image_indian_tourism {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image_indian_tourism {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image_indian_tourism img {
+    width: 40vw;
+  }
+  .second_header_part {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0 1vw;
+    justify-content: center;
+
+    margin-top: 1vh;
+  }
+  .hamburger_icon * {
+    display: none;
+  }
+}
+@media screen and (min-width: 820px) and (max-width: 1100px) {
+  .logo_header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 5vh;
+  }
+  .image_indian_tourism {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image_indian_tourism img {
+    width: 40vw;
+  }
+  .second_header_part {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0 2vw;
+    justify-content: center;
+
+    margin-top: 1vh;
+  }
+  .hamburger_icon * {
+    display: none;
+  }
+}
+.childnodeOn {
+  height: 100%;
+
+  flex-direction: column;
+}
+.childnodeOff {
+  display: none;
+  background-color: red;
+  height: 100%;
+}
+.childNode {
+  display: none;
+}
+.childNodeDisplay {
 }

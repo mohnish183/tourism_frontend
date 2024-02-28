@@ -9,7 +9,6 @@ import { NavLink } from "react-router-dom";
 
 function Home() {
   let HomeData = useContext(StoreData);
-  console.log(HomeData.tourData);
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });

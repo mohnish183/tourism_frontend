@@ -1,5 +1,7 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faHouse, faBars } from "@fortawesome/free-solid-svg-icons";
+import { LogOut } from "./Login";
 import { NavLink, Routes, Route } from "react-router-dom";
 import logo from "../Images/logo.jpg";
 import rajLogo from "../Images/raj_logo.jpg";
@@ -35,20 +37,117 @@ import AndraPradesh from "./Dynamic/AndraPradesh";
 import Beaches from "./Dynamic/Beaches";
 import HillStation from "./Dynamic/HillStation";
 import GoldenTriangle from "./Dynamic/GoldenTriangle";
+import { useState, useEffect } from "react";
 function Navbar() {
+  const [isActive, setIsActive] = useState("none");
+  const token = localStorage.getItem("token");
+  console.log(token);
+  useEffect(() => {
+    if (token) {
+      setIsActive("none");
+    } else {
+      setIsActive("block");
+    }
+  }, [token]);
+
+  // if (token) {
+  //   registerBtn.classList.add("display_register_none ");
+  //   registerBtn.classList.remove("display_register_block ");
+  // } else {
+  //   registerBtn.classList.add("display_register_none ");
+  //   registerBtn.classList.remove("display_register_block ");
+  // }
+  var navBar = document.getElementsByClassName("navbar_link");
+  var childNode;
+
+  let toggleValue = true;
+  const toggleMenu = () => {
+    if (toggleValue === true) {
+      navBar[0].classList.add("childnodeOn");
+
+      console.log("red");
+      navBar[0].classList.remove("childnodeOff");
+      childNode = navBar[0].children;
+      for (var i = 0; i < childNode.length; i++) {
+        childNode[i].classList.add("childNodeDisplay");
+        childNode[i].classList.remove("childNode");
+      }
+      toggleValue = false;
+    } else {
+      navBar[0].classList.remove("childnodeOn");
+      navBar[0].classList.add("childnodeOff");
+      childNode = navBar[0].children;
+      for (i = 0; i < childNode.length; i++) {
+        childNode[i].classList.add("childNode");
+        childNode[i].classList.remove("childNodeDisplay");
+      }
+      toggleValue = true;
+    }
+  };
+  window.addEventListener("resize", (e) => {
+    if (window.matchMedia(`(min-width: 600px)`).matches) {
+      navBar[0].classList.remove("childnodeOff");
+      navBar[0].classList.remove("childnodeOn");
+      childNode = navBar[0].children;
+      for (var i = 0; i < childNode.length; i++) {
+        childNode[i].classList.remove("childNode");
+        childNode[i].classList.remove("childNodeDisplay");
+      }
+    }
+    if (window.matchMedia(`(max-width:620px)`).matches) {
+      navBar[0].classList.add("childnodeOff");
+    }
+  });
   return (
     <div>
       <div className="logo_header">
-        <img src={logo} alt="not found" />
-        <img src={rajLogo} alt="not found" />
-        <div className="contact-info">
-          <p>Email: info@theindiatourism.com</p>
-          <div className="contact_phone">
-            <img src={Phone} alt="not found" />
-            <p>+91-9549279999</p>
+        <div className="image_indian_tourism">
+          <img src={logo} alt="not found" />
+        </div>
+        <div className="second_header_part">
+          <div className="second_header_logo">
+            <img src={rajLogo} alt="not found" />
+            <div className="contact-info">
+              <p>Email: info@theindiatourism.com</p>
+              <div className="contact_phone">
+                <img src={Phone} alt="not found" />
+                <p>+91-9549279999</p>
+              </div>
+            </div>
+          </div>
+          <div className="register-part">
+            <NavLink to={`/login`}>
+              <FontAwesomeIcon
+                className="fa-nav"
+                icon={faUser}
+                style={{ color: "brown" }}
+                size="2x"
+              />
+            </NavLink>
+
+            <NavLink to={`/register`}>
+              {" "}
+              <FontAwesomeIcon
+                className="fa-nav register"
+                id={
+                  isActive
+                    ? "display_register_none "
+                    : "display_register_block "
+                }
+                icon={faHouse}
+                style={{ color: "brown", display: isActive }}
+                size="2x"
+              />
+            </NavLink>
+            <LogOut />
           </div>
         </div>
       </div>
+      <div className="hamburger_icon" onClick={toggleMenu}>
+        {" "}
+        <FontAwesomeIcon icon={faBars} />
+      </div>
+
       <div className="navbar_link">
         <NavLink to={"/"}>Home</NavLink>
         <NavLink to={"/India_tour"}>India Tourism</NavLink>
