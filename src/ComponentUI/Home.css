@@ -1,5 +1,18 @@
 .india-tour {
 }
+
+h1,
+h2,
+h4,
+p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+b {
+  font-size: 18px;
+}
+
 .india-tour img {
   width: 100%;
   height: 80vh;
@@ -35,6 +48,11 @@ b {
 }
 hr {
   border: 0.5px dashed black;
+  height: 1px;
+  font-weight: 100;
+  border-top: none;
+  width: 100%;
+  margin-bottom: 5vh;
 }
 .headingtext2 {
   display: flex;
@@ -111,6 +129,7 @@ hr {
 .yourStyle-block {
   display: flex;
   gap: 0 2vh;
+  margin-top: 5vh;
 }
 .yourstyle-item-block {
   display: flex;

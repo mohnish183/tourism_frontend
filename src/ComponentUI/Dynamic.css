@@ -11,7 +11,7 @@
 .dynamic_discription {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 .dynamic_discription * {
   text-align: justify;
@@ -19,6 +19,7 @@
 .place_txt,
 span {
   color: red;
+  font-size: 18px;
 }
 .dynamic_discription h1 {
   text-align: center;
@@ -28,6 +29,7 @@ span {
   flex-wrap: wrap;
   gap: 2vh 5vw;
   justify-content: flex-start;
+  margin-bottom: 5vh;
 }
 .dynamic_items {
   background-color: rgb(249, 244, 244);

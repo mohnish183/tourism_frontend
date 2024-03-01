@@ -13,7 +13,7 @@ function Visit() {
       <div className="placevist_main_container">
         <div className="placevisit_discription">
           <h1>Top Tourist Destination India</h1>
-          <hr />
+          <hr className="break_line" />
           <p>
             Top Tourist Destination India is the home to numerous attractions,
             amenities, activities and beauties. It is not hard to believe that a

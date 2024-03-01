@@ -36,6 +36,15 @@
   display: flex;
   gap: 4vh;
 }
+
+.logout_section {
+  display: flex;
+  flex-direction: column;
+}
+.logout_section p {
+  color: brown;
+  font-size: 0.8rem;
+}
 /* ******* nav header */
 .navbar_link {
   display: flex;
@@ -101,14 +110,24 @@
   .navbar_link * {
     text-align: center;
   }
+  .display_logout {
+    position: relative;
+    right: 6vw;
+  }
 }
 @media screen and (min-width: 620px) and (max-width: 820px) {
   .logo_header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 5vh;
+  }
+  .second_header_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .image_indian_tourism {
     display: flex;
@@ -127,11 +146,17 @@
   .second_header_part {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 0 1vw;
     justify-content: center;
 
     margin-top: 1vh;
+  }
+  .register-part {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0 20vh;
   }
   .hamburger_icon * {
     display: none;
@@ -163,6 +188,11 @@
 
     margin-top: 1vh;
   }
+  .hamburger_icon * {
+    display: none;
+  }
+}
+@media screen and (min-width: 1100px) and (max-width: 1600px) {
   .hamburger_icon * {
     display: none;
   }
