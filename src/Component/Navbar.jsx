@@ -40,6 +40,7 @@ import GoldenTriangle from "./Dynamic/GoldenTriangle";
 import { useState, useEffect } from "react";
 function Navbar() {
   const [isActive, setIsActive] = useState("none");
+
   const token = localStorage.getItem("token");
   console.log(token);
   useEffect(() => {
@@ -115,16 +116,15 @@ function Navbar() {
               </div>
             </div>
           </div>
-          <div className="register-part">
+          <div className={`register-part `}>
             <NavLink to={`/login`}>
               <FontAwesomeIcon
                 className="fa-nav"
                 icon={faUser}
-                style={{ color: "brown" }}
+                style={{ color: "brown", display: isActive }}
                 size="2x"
               />
             </NavLink>
-
             <NavLink to={`/register`}>
               {" "}
               <FontAwesomeIcon
@@ -139,7 +139,11 @@ function Navbar() {
                 size="2x"
               />
             </NavLink>
-            <LogOut />
+            <div className={`logout_section`}>
+              {" "}
+              <LogOut />
+              <p>Logout</p>
+            </div>
           </div>
         </div>
       </div>
