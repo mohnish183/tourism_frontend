@@ -22,8 +22,9 @@ function Register() {
             alert(res.data.msg);
             navigate("/login");
           } else {
-            localStorage.setItem("token", res.data.token);
+            // localStorage.setItem("token", res.data.token);
             // local storage use to store the data in system
+            navigate("/login");
           }
         });
       console.log(response.data, "response data"); // handle the response as needed

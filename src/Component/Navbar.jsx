@@ -38,34 +38,27 @@ import Beaches from "./Dynamic/Beaches";
 import HillStation from "./Dynamic/HillStation";
 import GoldenTriangle from "./Dynamic/GoldenTriangle";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 function Navbar() {
   const [isActive, setIsActive] = useState("none");
-
-  const token = localStorage.getItem("token");
-  console.log(token);
+  const [token, setToken] = useState(null);
+  const { pathname } = useLocation();
+  console.log(pathname);
   useEffect(() => {
+    setToken(localStorage.getItem("token"));
+
     if (token) {
       setIsActive("none");
     } else {
       setIsActive("block");
     }
-  }, [token]);
-
-  // if (token) {
-  //   registerBtn.classList.add("display_register_none ");
-  //   registerBtn.classList.remove("display_register_block ");
-  // } else {
-  //   registerBtn.classList.add("display_register_none ");
-  //   registerBtn.classList.remove("display_register_block ");
-  // }
+  }, [pathname, token]);
   var navBar = document.getElementsByClassName("navbar_link");
   var childNode;
-
   let toggleValue = true;
   const toggleMenu = () => {
     if (toggleValue === true) {
       navBar[0].classList.add("childnodeOn");
-
       console.log("red");
       navBar[0].classList.remove("childnodeOff");
       childNode = navBar[0].children;
@@ -151,7 +144,6 @@ function Navbar() {
         {" "}
         <FontAwesomeIcon icon={faBars} />
       </div>
-
       <div className="navbar_link">
         <NavLink to={"/"}>Home</NavLink>
         <NavLink to={"/India_tour"}>India Tourism</NavLink>

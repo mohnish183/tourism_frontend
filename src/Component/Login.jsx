@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -27,6 +28,7 @@ function Login() {
             navigate("/register");
           } else {
             localStorage.setItem("token", res.data.token);
+
             navigate("/");
             // local storage use to store the data in system
           }
@@ -70,10 +72,10 @@ function Login() {
 }
 export default Login;
 function LogOut() {
-  let navi = useNavigate();
+  let navigate = useNavigate();
   const handleClick = () => {
     localStorage.removeItem("token");
-    navi("/login");
+    navigate("/");
     console.log("hello");
   };
   return (
