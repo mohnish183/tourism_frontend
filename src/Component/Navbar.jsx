@@ -105,6 +105,8 @@ function Navbar() {
 
   const handleClick = () => {
     localStorage.removeItem("token");
+    setIsActive("block");
+    setIsActive_2("none");
     navigate("/");
     console.log("hello");
   };
