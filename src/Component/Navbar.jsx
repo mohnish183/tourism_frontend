@@ -1,7 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faHouse, faBars } from "@fortawesome/free-solid-svg-icons";
-import { LogOut } from "./Login";
+import {
+  faUser,
+  faHouse,
+  faBars,
+  faRightFromBracket,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { NavLink, Routes, Route } from "react-router-dom";
 import logo from "../Images/logo.jpg";
 import rajLogo from "../Images/raj_logo.jpg";
@@ -39,8 +44,11 @@ import HillStation from "./Dynamic/HillStation";
 import GoldenTriangle from "./Dynamic/GoldenTriangle";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function Navbar() {
+  const navigate = useNavigate();
   const [isActive, setIsActive] = useState("none");
+  const [isActive_2, setIsActive_2] = useState("block");
   const [token, setToken] = useState(null);
   const { pathname } = useLocation();
   console.log(pathname);
@@ -49,8 +57,10 @@ function Navbar() {
 
     if (token) {
       setIsActive("none");
+      setIsActive_2("block");
     } else {
       setIsActive("block");
+      setIsActive_2("none");
     }
   }, [pathname, token]);
   var navBar = document.getElementsByClassName("navbar_link");
@@ -92,6 +102,12 @@ function Navbar() {
       navBar[0].classList.add("childnodeOff");
     }
   });
+
+  const handleClick = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+    console.log("hello");
+  };
   return (
     <div>
       <div className="logo_header">
@@ -132,11 +148,18 @@ function Navbar() {
                 size="2x"
               />
             </NavLink>
-            <div className={`logout_section`}>
+            <NavLink onClick={handleClick}>
+              <FontAwesomeIcon
+                icon={faRightFromBracket}
+                style={{ color: "brown", display: isActive_2 }}
+                size="2x"
+              />
+            </NavLink>
+            {/* <div className={`logout_section`}>
               {" "}
-              <LogOut />
+              <LogOut style={{ display: isActive_2 }} />
               <p>Logout</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

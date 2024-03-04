@@ -3,9 +3,9 @@ import "../ComponentUI/Login.css";
 // import logo_img from "../Images/Login";
 // import login_logo from "../Images/official-login.jpg";
 import tour_login from "../Images/shutterstock-login.jpg";
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+// import { NavLink } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -71,24 +71,24 @@ function Login() {
   );
 }
 export default Login;
-function LogOut() {
-  let navigate = useNavigate();
-  const handleClick = () => {
-    localStorage.removeItem("token");
-    navigate("/");
-    console.log("hello");
-  };
-  return (
-    <>
-      {/* <button onClick={handleClick}>Logout</button> */}
-      <NavLink onClick={handleClick}>
-        <FontAwesomeIcon
-          icon={faRightFromBracket}
-          style={{ color: "brown" }}
-          size="2x"
-        />
-      </NavLink>
-    </>
-  );
-}
-export { LogOut };
+// function LogOut() {
+//   let navigate = useNavigate();
+//   const handleClick = () => {
+//     localStorage.removeItem("token");
+//     navigate("/");
+//     console.log("hello");
+//   };
+//   return (
+//     <>
+//       {/* <button onClick={handleClick}>Logout</button> */}
+//       <NavLink onClick={handleClick}>
+//         <FontAwesomeIcon
+//           icon={faRightFromBracket}
+//           style={{ color: "brown" }}
+//           size="2x"
+//         />
+//       </NavLink>
+//     </>
+//   );
+// }
+// export { LogOut };
